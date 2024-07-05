@@ -1,13 +1,16 @@
+require('dotenv').config();
 const express = require('express');
-const app = express();
 const morgan = require('morgan');
+const cors = require('cors');
+const app = express();
 
+const PORT = process.env.PORT || 3001;
 
+app.use(express.static('dist'))
+app.use(cors());
 app.use(express.json());
 morgan.token('body', (req) => JSON.stringify(req.body));
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
-
-const PORT = 3001
 
 let phonebook = [
     { 
@@ -30,11 +33,6 @@ let phonebook = [
       "name": "Mary Poppendieck", 
       "number": "39-23-6423122"
     },
-    { 
-        "id": "4",
-        "name": "Mary Poppendieck", 
-        "number": "39-23-6423122"
-      },
 ];
 
 const length = phonebook.length;
