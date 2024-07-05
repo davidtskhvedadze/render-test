@@ -5,8 +5,9 @@ DELETE http://localhost:3001/api/persons/1 HTTP/1.1
 
 ###
 
-POST http://localhost:3001/api/persons/ HTTP/1.1 Content-Type: application/json
+POST http://localhost:3001/api/persons/ HTTP/1.1 
+Content-Type: application/json
 
 {
-"id": "3", "name": "David", "number": "39-23-6423122"
+ "name": "David", "number": "39-23-6423122"
 }
