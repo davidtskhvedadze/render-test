@@ -1,0 +1,19 @@
+{
+  "name": "submission-repository2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon inde.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Tskhvedadze",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
